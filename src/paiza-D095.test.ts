@@ -1,4 +1,4 @@
-import { handleStdin } from './D095'
+import { handleStdin } from './paiza-D095'
 
 it('can output correct result', () => {
   let pseudoInput
