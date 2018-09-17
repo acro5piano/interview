@@ -58,6 +58,9 @@ function divideArray(originalArray: number[]): number[][] {
  * e.g.) findEqualSumPartition([1, 3, 2, 2, 1, 3]) = 4
  */
 function findEqualSumPartition(array: number[]): number {
+  if (array.length === 0) {
+    return 0
+  }
   return Math.min(...divideArray(array).map(sum))
 }
 
