@@ -10,7 +10,6 @@ const insertionSort = array => {
       }
     }
     array[j] = valueToBeInserted
-    console.log(array)
   }
   return array
 }
