@@ -11,10 +11,10 @@ const fib = n => {
   return fib(n - 1) + fib(n - 2)
 }
 
-const fibWithMemoirze = n => {
+const fibWithMemoize = n => {
   const memo = new Map()
 
-  const _fibWithMemoirze = n => {
+  const _fibWithMemoize = n => {
     called++
 
     if (n === 0) {
@@ -25,18 +25,18 @@ const fibWithMemoirze = n => {
     }
 
     if (memo.has(n)) {
-      return memo.get(n) + _fibWithMemoirze(n - 2)
+      return memo.get(n) + _fibWithMemoize(n - 2)
     }
-    const memoized = _fibWithMemoirze(n - 1)
+    const memoized = _fibWithMemoize(n - 1)
     memo.set(n, memoized)
 
-    return memoized + _fibWithMemoirze(n - 2)
+    return memoized + _fibWithMemoize(n - 2)
   }
 
-  return _fibWithMemoirze(n)
+  return _fibWithMemoize(n)
 }
 
-const fibFunc = fibWithMemoirze
+const fibFunc = fibWithMemoize
 
 Array(40)
   .fill(0)
