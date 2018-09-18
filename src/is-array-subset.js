@@ -25,3 +25,14 @@ const testing = [
 ]
 
 testing.map(t => isArraySubset(...t)).forEach(console.log)
+
+// const isArraySubset = (array, items) => {
+//   let testing = array.slice()
+//   const isNotSubset = items.some(item => {
+//     const index = testing.indexOf(item)
+//     delete testing[index]
+//     return index === -1
+//   })
+//
+//   return !isNotSubset
+// }
